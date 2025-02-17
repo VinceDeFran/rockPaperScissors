@@ -35,6 +35,11 @@ else "Computer wins the round." / computerScore +1
 return humanScore computerScore
 }
 console.log(`Human's score is $humanScore, and the Computer's score is $computerScore.`)
-********************************************************************************************************************
+*****************************************************************************************
 
-
+5) Improve the User Interface
+****************************************************************
+Make humanChoice case-insensitive.  
+Console.log detailed round winner messages.
+Improve the console message.
+********************************************************************************
