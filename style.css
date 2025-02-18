@@ -13,6 +13,10 @@
   min-height: 100vh;
 }
 
+button {
+  font-size: 32px;
+}
+
 .header {
   display: flex;
   align-items: center;
