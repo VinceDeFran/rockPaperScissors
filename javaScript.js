@@ -1,9 +1,8 @@
- //console.log("Hello, JS script!")
- function start()
- {
-   alert ("Please enter Ctrl+Shift+J to open the Console and start playing.");
- }
- start();
+function start()
+{
+  alert ("Please enter Ctrl+Shift+J to open the Console and start playing.");
+}
+start();
 
 window.addEventListener('DOMContentLoaded', () => 
 {
@@ -15,15 +14,6 @@ window.addEventListener('DOMContentLoaded', () =>
       let computerChoice = " ";
       let round = 1;
  
-
-
-/*      function getHumanChoice (humanChoice) 
-      {
-        humanChoice = prompt("Please enter Rock, Paper, or Scissors.");
-        humanChoice = humanChoice.toUpperCase();
-        return humanChoice;
-      }
- */     
       function getComputerChoice () 
       { 
         let randomNumber = Math.floor(Math.random() * 99);  
@@ -37,80 +27,88 @@ window.addEventListener('DOMContentLoaded', () =>
           {
             computerChoice = "SCISSORS";
         }
-        return computerChoice;
       }
 
+      function getHumanChoice () 
+      {
+        humanChoice = prompt("Please enter Rock, Paper, or Scissors.");
+        humanChoice = humanChoice.toUpperCase();
+      }
+    
+      function playRound (getHumanInput, getComputerInput) 
+      {
+        window.stop();
+        console.log (`ROUND ${round}`)
+
+        window.stop();   
+        getHumanInput();
+        getComputerInput(); 
+        console.log(`The Human chose ${humanChoice}.`);
+        console.log(`The Computer chose ${computerChoice}.`);      
+        window.stop();   
+
+        if (computerChoice === humanChoice) 
+        {
+          console.log(`${humanChoice} on ${computerChoice}.`);
+          console.log("It's a tie.");
+          console.log (`The Human's score is ${humanScore}.`);
+          console.log (`The Computer's score is ${computerScore}.`);
+          } 
+          else if ( (humanChoice==="ROCK") && (computerChoice==="SCISSORS")) 
+          {
+            console.log("Human wins the round.");
+            console.log(`${humanChoice} beats ${computerChoice}!`);
+            humanScore = humanScore + 1;
+            console.log (`The Human's score is ${humanScore}.`);
+            console.log (`The Computer's score is ${computerScore}.`);
+          } 
+          else if ( (humanChoice==="PAPER") && (computerChoice==="ROCK")) 
+          {
+            console.log("Human wins the round.");
+            console.log(`${humanChoice} beats ${computerChoice}!`);
+            humanScore = humanScore + 1;
+            console.log (`The Human's score is ${humanScore}.`);
+            console.log (`The Computer's score is ${computerScore}.`);
+          } 
+          else if ( (humanChoice==="SCISSORS") && (computerChoice==="PAPER")) 
+          {
+              console.log("Human wins the round.");
+              console.log(`${humanChoice} beats ${computerChoice}!`);
+              humanScore = humanScore + 1;
+              console.log (`The Human's score is ${humanScore}.`);
+              console.log (`The Computer's score is ${computerScore}.`);
+          } 
+          else 
+          {
+              console.log(`${computerChoice} beats ${humanChoice}!`);
+              console.log("Computer wins the round.");
+              computerScore = computerScore + 1;
+              console.log (`The Computer's score is ${computerScore}.`);
+              console.log (`The Human's score is ${humanScore}.`);
+        }
+
+          console.log (" "); 
+          round = round + 1;
+          window.stop();           
+      }
+   
+      console.log ("The Game Starts NOW!");
+      window.stop();          
     /*playWholeGame (humanScore, computerScore, computerChoice, randomNumber);
       function playWholeGame (humanScore, computerScore, computerChoice, randomNumber) 
       {*/
-        console.log ("The Game Starts NOW!");
-        window.stop();          
 
-        for (let i = 1; i <= 5; i++) 
-        {
-          console.log (`ROUND ${i}`)
-          //console.log (`The Human's score is ${humanScore}.`);
-          //console.log (`The Computer score is ${computerScore}.`);
+        //for (let i = 1; i <= 5; i++) 
+        //{
+          
+        //}
+        //Removed FOR LOOP and called func 5x
 
-          getComputerChoice(computerChoice);
-          //console.log(`The Computer chose ${computerChoice}.`);
-
-          //getHumanChoice(humanChoice);
-
-          humanChoice = prompt("Please enter Rock, Paper, or Scissors.");
-          humanChoice = humanChoice.toUpperCase();
-          console.log(`The Human chose ${humanChoice}.`);
-          console.log(`The Computer chose ${computerChoice}.`);
-
-          window.stop();          
-
-            //function singleRound (computerChoice, humanChoice, humanScore, computerScore) 
-            //{
-            if (computerChoice === humanChoice) 
-            {
-              console.log(`${humanChoice} on ${computerChoice}.`);
-              console.log("It's a tie.");
-              console.log (`The Human's score is ${humanScore}.`);
-              console.log (`The Computer's score is ${computerScore}.`);
-              } 
-              else if ( (humanChoice==="ROCK") && (computerChoice==="SCISSORS")) 
-              {
-                console.log("Human wins the round.");
-                console.log(`${humanChoice} beats ${computerChoice}!`);
-                humanScore = humanScore + 1;
-                console.log (`The Human's score is ${humanScore}.`);
-                console.log (`The Computer's score is ${computerScore}.`);
-              } 
-              else if ( (humanChoice==="PAPER") && (computerChoice==="ROCK")) 
-              {
-                console.log("Human wins the round.");
-                console.log(`${humanChoice} beats ${computerChoice}!`);
-                humanScore = humanScore + 1;
-                console.log (`The Human's score is ${humanScore}.`);
-                console.log (`The Computer's score is ${computerScore}.`);
-              } 
-              else if ( (humanChoice==="SCISSORS") && (computerChoice==="PAPER")) 
-              {
-                  console.log("Human wins the round.");
-                  console.log(`${humanChoice} beats ${computerChoice}!`);
-                  humanScore = humanScore + 1;
-                  console.log (`The Human's score is ${humanScore}.`);
-                  console.log (`The Computer's score is ${computerScore}.`);
-              } 
-              else 
-              {
-                  console.log(`${computerChoice} beats ${humanChoice}!`);
-                  console.log("Computer wins the round.");
-                  computerScore = computerScore + 1;
-                  console.log (`The Computer's score is ${computerScore}.`);
-                  console.log (`The Human's score is ${humanScore}.`);
-            }
-              //return [humanScore, computerScore, computerChoice, humanChoice]
-              //}
-              //singleRound (computerChoice, humanChoice, humanScore, computerScore);  
-              console.log (" "); 
-              window.stop();           
-        }
+          playRound(getHumanChoice, getComputerChoice);
+          playRound(getHumanChoice, getComputerChoice);
+          playRound(getHumanChoice, getComputerChoice);
+          playRound(getHumanChoice, getComputerChoice);
+          playRound(getHumanChoice, getComputerChoice);
       
         if (humanScore > computerScore) 
         {
