@@ -1,0 +1,15 @@
+
+
+	Requirements - Know what is wanted.  Rewrite inststructions in a clear list of requirements.
+	
+	Draw the flow or a state diagram.
+	Pseudocode a solution.
+	Create a new Git repository for your project.
+	Create a blank HTML document with a script tag. (Add Boiler Plate files)
+	Write the code.  (commit early and often!)
+	Test the code.
+	
+
+
+
+
