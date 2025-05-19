@@ -14,7 +14,8 @@
 }
 
 button {
-  font-size: 32px;
+  font-size: 20px;
+  margin-top: 60px;
 }
 
 .header {
@@ -24,7 +25,7 @@ button {
   font-size: 32px;
   font-weight: 900;
   height: 72px;
-  background: darkmagenta;
+  background: rgb(156, 132, 156);
   color: white;
 }
 
@@ -36,9 +37,9 @@ button {
 
 .leftside {
   flex-shrink: 0;
-  padding: 16px;
+  padding: 20px;
   width: 10%;
-  min-width: 140px;
+  min-width: 180px;
   background: royalblue;
   box-sizing: border-box;
 }
@@ -56,7 +57,8 @@ button {
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 18px;
   padding: 16px;
-  width: 300px;
+  width: max-content;
+  height: max-content;
 }
 
 .rightside {

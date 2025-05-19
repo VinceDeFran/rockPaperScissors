@@ -1,3 +1,44 @@
+let humanScore = 0;
+let computerScore = 0;
+let humanChoice = " ";
+let computerChoice = "0";
+let round = 1;
+
+
+const rockButton = document.querySelector("#rockButton");
+rockButton.addEventListener("click", throwRock);
+function throwRock() 
+{  
+  humanChoice = "ROCK";
+  return humanChoice;
+}
+
+const paperButton = document.querySelector("#paperButton");
+paperButton.addEventListener("click", throwPaper);
+function throwPaper() 
+{  
+  humanChoice = "PAPER";
+  return humanChoice;
+}
+
+const scissorsButton = document.querySelector("#scissorsButton");
+scissorsButton.addEventListener("click", throwScissors);
+function throwScissors() 
+{  
+  humanChoice = "SCISSORS";
+  return humanChoice;
+}
+
+document.addEventListener('click', function(event) {
+  if (event.target.tagName === 'BUTTON') {
+    // Handle any button click
+    playRound (humanChoice, getComputerChoice);
+  }
+});
+
+
+/*
+
 function start()
 {
   alert ("Please enter Ctrl+Shift+J to open the Console and start playing.");
@@ -8,11 +49,7 @@ window.addEventListener('DOMContentLoaded', () =>
 {
   document.querySelector('#button').addEventListener('click', () => 
   {
-    let humanScore = 0;
-    let computerScore = 0;
-    let humanChoice = " ";
-    let computerChoice = " ";
-    let round = 1;
+    */
 
     function getComputerChoice () 
     { 
@@ -29,23 +66,18 @@ window.addEventListener('DOMContentLoaded', () =>
       }
     }
 
-    function getHumanChoice () 
-    {
-      humanChoice = prompt("Please enter Rock, Paper, or Scissors.");
-      humanChoice = humanChoice.toUpperCase();
-    }
+
   
-    function playRound (getHumanInput, getComputerInput) 
+    function playRound (humanChoice, getComputerInput) 
     {
-      window.stop();
+      
       console.log (`ROUND ${round}`)
 
-      window.stop();   
-      getHumanInput();
+      
       getComputerInput(); 
       console.log(`The Human chose ${humanChoice}.`);
       console.log(`The Computer chose ${computerChoice}.`);      
-      window.stop();   
+
 
       if (computerChoice === humanChoice) 
       {
@@ -88,11 +120,10 @@ window.addEventListener('DOMContentLoaded', () =>
       }
 
         console.log (" "); 
-        round = round + 1;
-        window.stop();           
+        round = round + 1;  
     }
   
-
+/*
     function playGame (humanThink, computerThink, playOnce) 
     {
       console.log ("The Game Starts NOW!");
@@ -118,7 +149,12 @@ window.addEventListener('DOMContentLoaded', () =>
       console.log (" "); 
       console.log (" "); 
     }
+      */
 
-    playGame (getHumanChoice, getComputerChoice, playRound);
+ //   playGame (getHumanChoice, getComputerChoice, playRound);
+
+/*   Page start... from before moving script tag to the end.    
   });
 });
+
+*/
