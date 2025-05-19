@@ -37,20 +37,6 @@ document.addEventListener('click', function(event) {
 });
 
 
-/*
-
-function start()
-{
-  alert ("Please enter Ctrl+Shift+J to open the Console and start playing.");
-}
-start();
-
-window.addEventListener('DOMContentLoaded', () => 
-{
-  document.querySelector('#button').addEventListener('click', () => 
-  {
-    */
-
     function getComputerChoice () 
     { 
       let randomNumber = Math.floor(Math.random() * 99);  
@@ -70,56 +56,114 @@ window.addEventListener('DOMContentLoaded', () =>
   
     function playRound (humanChoice, getComputerInput) 
     {
+            
+        // Select the .item1 element to add results to .container1.
+        const item1Div = document.querySelector('.item1');
       
-      console.log (`ROUND ${round}`)
+        // Get the parent of .item1 (should be .container1)
+        const containerDiv = item1Div.parentElement;
+      
+      
 
       
       getComputerInput(); 
-      console.log(`The Human chose ${humanChoice}.`);
-      console.log(`The Computer chose ${computerChoice}.`);      
 
+
+      //console.log(`The Human chose ${humanChoice}.`);
+      //console.log(`The Computer chose ${computerChoice}.`);      
+
+
+        // Create a new div element to add the results of the round to the DOM.
+        const newDiv = document.createElement('div');
+        newDiv.textContent = `ROUND ${round}.  The Human chose ${humanChoice}.  The Computer chose ${computerChoice}.`;
+        newDiv.classList.add('item1');
+        // Insert the new div after .container1 in the DOM
+        containerDiv.appendChild(newDiv);
 
       if (computerChoice === humanChoice) 
       {
-        console.log(`${humanChoice} on ${computerChoice}.`);
-        console.log("It's a tie.");
-        console.log (`The Human's score is ${humanScore}.`);
-        console.log (`The Computer's score is ${computerScore}.`);
+        //console.log(`${humanChoice} on ${computerChoice}.`);
+        //console.log("It's a tie.");
+        //console.log (`The Human's score is ${humanScore}.`);
+        //console.log (`The Computer's score is ${computerScore}.`);
+
+        // Create a new div element to add the results of the round to the DOM.
+        const newDiv = document.createElement('div');
+        newDiv.textContent = `${humanChoice} on ${computerChoice}.  It's a tie.  The Human's score is ${humanScore}.  The Computer's score is ${computerScore}.`;
+        newDiv.classList.add('item1');
+        // Insert the new div after .container1 in the DOM
+        containerDiv.appendChild(newDiv);
+
         } 
         else if ( (humanChoice==="ROCK") && (computerChoice==="SCISSORS")) 
         {
-          console.log("Human wins the round.");
-          console.log(`${humanChoice} beats ${computerChoice}!`);
-          humanScore = humanScore + 1;
-          console.log (`The Human's score is ${humanScore}.`);
-          console.log (`The Computer's score is ${computerScore}.`);
+
+        humanScore = humanScore + 1;
+  
+        //console.log("Human wins the round.");
+        //console.log(`${humanChoice} beats ${computerChoice}!`);
+        //console.log (`The Human's score is ${humanScore}.`);
+        //console.log (`The Computer's score is ${computerScore}.`);
+
+        // Create a new div element to add the results of the round to the DOM.
+        const newDiv = document.createElement('div');
+        newDiv.textContent = `Human wins the round.  ${humanChoice} beats ${computerChoice}!  The Human's score is ${humanScore}.  The Computer's score is ${computerScore}.`;
+        newDiv.classList.add('item1');
+        // Insert the new div after .container1 in the DOM
+        containerDiv.appendChild(newDiv);
         } 
         else if ( (humanChoice==="PAPER") && (computerChoice==="ROCK")) 
         {
-          console.log("Human wins the round.");
-          console.log(`${humanChoice} beats ${computerChoice}!`);
-          humanScore = humanScore + 1;
-          console.log (`The Human's score is ${humanScore}.`);
-          console.log (`The Computer's score is ${computerScore}.`);
+
+        humanScore = humanScore + 1;
+
+        //console.log("Human wins the round.");
+        //console.log(`${humanChoice} beats ${computerChoice}!`);
+        //console.log (`The Human's score is ${humanScore}.`);
+        //console.log (`The Computer's score is ${computerScore}.`);
+
+        // Create a new div element to add the results of the round to the DOM.
+        const newDiv = document.createElement('div');
+        newDiv.textContent = `Human wins the round.  ${humanChoice} beats ${computerChoice}!  The Human's score is ${humanScore}.  The Computer's score is ${computerScore}.`;
+        newDiv.classList.add('item1');
+        // Insert the new div after .container1 in the DOM
+        containerDiv.appendChild(newDiv);
         } 
         else if ( (humanChoice==="SCISSORS") && (computerChoice==="PAPER")) 
         {
-            console.log("Human wins the round.");
-            console.log(`${humanChoice} beats ${computerChoice}!`);
-            humanScore = humanScore + 1;
-            console.log (`The Human's score is ${humanScore}.`);
-            console.log (`The Computer's score is ${computerScore}.`);
+
+        humanScore = humanScore + 1;
+
+        //console.log("Human wins the round.");
+        //console.log(`${humanChoice} beats ${computerChoice}!`);
+        //console.log (`The Human's score is ${humanScore}.`);
+        //console.log (`The Computer's score is ${computerScore}.`);
+
+        // Create a new div element to add the results of the round to the DOM.
+        const newDiv = document.createElement('div');
+        newDiv.textContent = `Human wins the round.  ${humanChoice} beats ${computerChoice}!  The Human's score is ${humanScore}.  The Computer's score is ${computerScore}.`;
+        newDiv.classList.add('item1');
+        // Insert the new div after .container1 in the DOM
+        containerDiv.appendChild(newDiv);
         } 
         else 
         {
-            console.log(`${computerChoice} beats ${humanChoice}!`);
-            console.log("Computer wins the round.");
-            computerScore = computerScore + 1;
-            console.log (`The Computer's score is ${computerScore}.`);
-            console.log (`The Human's score is ${humanScore}.`);
+        computerScore = computerScore + 1;
+
+        //console.log(`${computerChoice} beats ${humanChoice}!`);
+        //console.log("Computer wins the round.");
+        //console.log (`The Computer's score is ${computerScore}.`);
+        //console.log (`The Human's score is ${humanScore}.`);
+
+        // Create a new div element to add the results of the round to the DOM.
+        const newDiv = document.createElement('div');
+        newDiv.textContent = `${computerChoice} beats ${humanChoice}!  Computer wins the round.  The Human's score is ${humanScore}.  The Computer's score is ${computerScore}.`;
+        newDiv.classList.add('item1');
+        // Insert the new div after .container1 in the DOM
+        containerDiv.appendChild(newDiv);
       }
 
-        console.log (" "); 
+        //console.log (" "); 
         round = round + 1;  
     }
   

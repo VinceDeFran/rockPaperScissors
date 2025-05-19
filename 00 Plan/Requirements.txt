@@ -1,9 +1,9 @@
-1. TBD  Delete 5 rounds logic. TBD - My code might work well with the new buttons.
+DONE  1.   Delete 5 rounds logic.
 
-2a. Create three buttons in HTML to select Rock, Paper, or Scissor. 
+DONE  2a. Create three buttons in HTML to select Rock, Paper, or Scissor. 
 
-2b. Add an event listener to the buttons that call your playRound function with the correct playerSelection every time a button is clicked. (you can keep the console.logs for this step)
+DONE  2b. Add an event listener to the buttons that call your playRound function with the correct playerSelection every time a button is clicked. (you can keep the console.logs for this step)
 
-3. Add a div for displaying results and change all of your console.logs into DOM methods.
+DONE   3. Add a div for displaying results and change all of your console.logs into DOM methods.
 
 4. Display the running score, and announce a winner of the game once one player reaches 5 points.
